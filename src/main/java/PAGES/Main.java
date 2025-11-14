@@ -1,6 +1,6 @@
 package main.java.PAGES;
 
-import main.java.DAO.EmpDAO;
+import main.java.DAO.*;
 import main.java.MODELE.*;
 
 public class Main {
@@ -17,9 +17,15 @@ public class Main {
         emp.setComm(0);
         emp.setDeptno(20);
 
+        History his = new History();
+        his.setEmpno(7369);
+        his.setHsal(800);
+        his.setIdrubrique(1);
+
         try {
-            int val = EmpDAO.findEmpSalById(emp);
-            System.out.println(val);
+            // int val = EmpDAO.findEmpSalById(emp);
+            HistoryDAO.save(his);
+            // System.out.println(val);
         } catch (Exception e) {
             e.printStackTrace();
         }

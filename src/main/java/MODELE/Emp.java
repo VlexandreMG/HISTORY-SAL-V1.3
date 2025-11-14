@@ -13,20 +13,6 @@ public class Emp {
     double cnaps;
     double irsa;
 
-    public Emp(int empno, String ename, String job, int mgr, String hiredate, double sal, int comm, int deptno, double avantages, double cnaps, double irsa) {
-        this.empno = empno;
-        this.ename = ename;
-        this.job = job;
-        this.mgr = mgr;
-        this.hiredate = hiredate;
-        this.sal = sal;
-        this.comm = comm;
-        this.deptno = deptno;
-        this.avantages = avantages;
-        this.cnaps = cnaps;
-        this.irsa = irsa;
-    }
-
     public Emp() {
         setEname(ename);
         setJob(job);

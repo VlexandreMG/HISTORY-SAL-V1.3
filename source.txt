@@ -1,7 +1,9 @@
 src/main/java/MODELE/Emp.java
+src/main/java/MODELE/History.java
 src/main/java/PAGES/DBconnection.java
 src/main/java/PAGES/Main.java
 src/main/java/DAO/EmpDAO.java
+src/main/java/DAO/HistoryDAO.java
 src/main/java/PAYROLL_CALC/Cnaps_range.java
 src/main/java/PAYROLL_CALC/Cnaps_percent.java
 src/main/java/PAYROLL_CALC/Cnaps_calc.java
