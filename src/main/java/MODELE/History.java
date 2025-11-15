@@ -8,15 +8,15 @@ public class History {
 
     public History() {
         setEmpno(empno);
-        setHdate(hdate);
-        setHsal(hsal);
+        setDateRef(hdate);
+        setValeur(hsal);
     }
 
-    public int getIdrubrique() {
+    public int getIdRubrique() {
         return idrubrique;
     }
     
-    public void setIdrubrique(int idrubrique) {
+    public void setIdRubrique(int idrubrique) {
         this.idrubrique = idrubrique;
     }
 
@@ -24,11 +24,11 @@ public class History {
         this.empno = empno;
     }
 
-    public void setHdate(java.sql.Date hdate) {
+    public void setDateRef(java.sql.Date hdate) {
         this.hdate = hdate;
     }
 
-    public void setHsal(double hsal) {
+    public void setValeur(double hsal) {
         this.hsal = hsal;
     }
 
@@ -36,11 +36,11 @@ public class History {
         return empno;
     }
 
-    public java.sql.Date getHdate() {
+    public java.sql.Date getDateRef() {
         return hdate;
     }
 
-    public double getHsal() {
+    public double getValeur() {
         return hsal;
     }   
 }
