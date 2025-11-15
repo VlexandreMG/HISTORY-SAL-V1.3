@@ -298,8 +298,8 @@ public class Main {
 
         try {
             // int val = EmpDAO.findEmpSalById(emp);
-            HistoryDAO.updateDate(history_smith, new java.sql.Date(System.currentTimeMillis()));
-            // System.out.println(val);
+            HistoryDAO.selectDate(history_smith);
+            //System.out.println(dateRef);
         } catch (Exception e) {
             e.printStackTrace();
         }

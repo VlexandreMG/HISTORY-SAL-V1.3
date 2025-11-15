@@ -78,6 +78,51 @@ public class HistoryDAO {
             }
         }
     }
+
+    public static java.sql.Date selectDate(History his, Connection conn) throws SQLException {
+        String sql = "SELECT DATE_REF FROM HISTORY WHERE EMPNO = ? AND DATE_REF = NULL";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, his.getEmpno());
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getDate("DATE_REF");
+            }
+            return null;
+        } catch (Exception e) {
+            conn.rollback();
+            throw e;
+        } finally {
+            if ( rs != null) {
+                rs.close();
+            }
+            if ( ps != null) {
+                ps.close();
+            }
+        }
+    }
+
+    public static java.sql.Date selectDate(History his) throws SQLException {
+        Connection conn = null;
+
+        try {
+            conn = new DBconnection().getConnection();
+            java.sql.Date dateRef = selectDate(his, conn);
+            conn.commit();
+            return dateRef;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            if ( conn != null) {
+                conn.close();
+            }
+        }
+    }
+
+
 }
 
 
